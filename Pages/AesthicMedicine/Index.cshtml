@@ -1,0 +1,43 @@
+﻿
+@model List<BeautyServicesModel>
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div>
+    Aesthics Services' information:
+    Name:
+</div>
+<input type="text" />
+
+<div class="text-center">
+   <table class="table">
+       <thead>
+           <tr>
+               <th scope="col">
+                   #
+               </th>
+                 <th scope="col">
+                   Name
+               </th>
+                 <th scope="col">
+                   Actions
+               </th>
+           </tr>
+       </thead>
+       <tbody>
+            @foreach(var model in Model)
+            {
+               @foreach(var aesthic in model.Aesthics)
+               {
+                <tr>    
+                    <th scope="row">@(model.Aesthics.IndexOf(aesthic)+1)</th>
+                    <td>@aesthic.Name</td>
+                    <td><a asp-area="" asp-controller="AesthicMedicine" asp-action="Delete" asp-route-index="@(model.Aesthics.IndexOf(aesthic))">Delete</a></td>
+                </tr>
+                }
+            }
+        </tbody>
+   </table>
+</div>

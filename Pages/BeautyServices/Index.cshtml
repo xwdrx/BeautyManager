@@ -1,0 +1,50 @@
+﻿
+@model List<BeautySpecialistModel>
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    Specialist' information:
+    Name: 
+</div>
+<input type="text" />
+
+<div class="text-center">
+   <table class="table">
+       <thead>
+           <tr>
+               <th scope="col">
+                   #
+               </th>
+                 <th scope="col">
+                   Name
+               </th>
+                 <th scope="col">
+                   Actions
+               </th>
+           </tr>
+       </thead>
+       <tbody>
+            @foreach(var model in Model)
+            {
+               @foreach (var item in model.beautyServicesModels)
+               {
+                    <tr>    
+                    <th scope="row">@(model.beautyServicesModels.IndexOf(item)+1)</th>
+                    <td>@item.Name</td>
+                    @if(item.GetType().BaseType==typeof(AesthicMedicineModel)){ 
+                        <td><a asp-area=""  asp-controller="AesthicMedicine" asp-action="View" asp-route-index= "@(model.beautyServicesModels.IndexOf(item))">View</a> |
+                        <a asp-area="" asp-controller="AesthicMedicine" asp-action="Delete" asp-route-index= "@(model.beautyServicesModels.IndexOf(item))">Delete</a></td>
+                    }
+                    else{
+                        <td><a asp-area="" asp-controller="Cosmetology" asp-action="View" asp-route-index= "@(model.beautyServicesModels.IndexOf(item))">View</a> |
+                        <a asp-area=""asp-controller="Cosmetology" asp-action="Delete" asp-route-index= "@(model.beautyServicesModels.IndexOf(item))">Delete</a></td>
+                    }
+                </tr>
+                   
+               }
+            }
+        </tbody>
+   </table>
+</div>
