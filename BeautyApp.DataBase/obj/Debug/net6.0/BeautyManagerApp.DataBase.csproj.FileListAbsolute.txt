@@ -1,0 +1,14 @@
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\bin\Debug\net6.0\BeautyManagerApp.DataBase.deps.json
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\bin\Debug\net6.0\BeautyManagerApp.DataBase.dll
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\bin\Debug\net6.0\BeautyManagerApp.DataBase.pdb
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\BeautyManagerApp.DataBase.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\BeautyManagerApp.DataBase.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\BeautyManagerApp.DataBase.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\BeautyManagerApp.DataBase.AssemblyInfo.cs
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\BeautyManagerApp.DataBase.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\BeautyManagerApp.DataBase.dll
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\refint\BeautyManagerApp.DataBase.dll
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\BeautyManagerApp.DataBase.pdb
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\ref\BeautyManagerApp.DataBase.dll
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\bin\Debug\net6.0\BeautyManagerApp.DataBase.runtimeconfig.json
+C:\Users\asus\Desktop\netaPI\proj3\BeautyManagerApp\BeautyApp.DataBase\obj\Debug\net6.0\BeautyManagerApp.DataBase.genruntimeconfig.cache
