@@ -1,0 +1,69 @@
+﻿@*Home page - specialists' services table*@
+@model List<BeautySpecialistViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<nav class="navbar border p-2" >
+    <a  asp-area="" asp-controller="Home" asp-action="Add"  class="btn btn-success " >add</a>
+    <form asp-controller="Home" asp-action="Index"  class="d-flex justify-content-end ">  
+        <input type="text" name="filterName" placeholder="filter" aria-label="filter" class="form-control"/>
+        <button type="submit" class="btn btn-success">Filter</button>
+    </form>
+</nav>
+<div class="container">
+    <div class="row">
+       <div class="col">
+           <img src="https://ibb.co/BLgZ9x7"
+           class="img-fluid rounded-1" >
+       </div>
+
+        <div class="text-center col">
+    <table class="table">
+        <thead class="thCol">
+            <tr>
+               <th scope="col">
+                   Id
+               </th>
+                 <th scope="col">
+                   First name
+               </th>
+                 <th scope="col">
+                   Last name
+               </th>
+                 <th scope="col">
+                   Phone number
+               </th>
+                 <th scope="col">
+                   Email
+               </th>
+                 <th scope="col">
+                   Actions
+               </th>
+            </tr>            
+        </thead>
+        <tbody>
+            @foreach (var specialist in Model) 
+            {
+                <tr>
+                    <th scope="row">@specialist.Id</th>
+                    <td>@specialist.FirstName</td>
+                     <td>@specialist.LastName</td>
+                      <td>@specialist.PhoneNumber</td>
+                       <td>@specialist.Email</td>
+                    <td class="btn-group ">
+                        <a asp-area="" asp-controller="Home" asp-action="View" asp-route-specialistID="@specialist.Id"  class="btn btn-sm " >View</a>
+                        
+                        <a asp-area="" asp-controller="Home" asp-action="Delete" asp-route-specialistID="@specialist.Id"  class="btn btn-sm ">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+        </div>
+    </div>
+</div>
+

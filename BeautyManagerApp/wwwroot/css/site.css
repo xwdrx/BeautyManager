@@ -1,0 +1,46 @@
+/*Razor's index pages stylesheet*/
+
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: #D9E1E4;
+}
+.btn {
+    background: #587ca1;
+
+}
+
+.col {
+    
+    background: #fafafa;
+    border-radius: 4px 5px;
+}
+.navbar {
+    background: #9cbbd2f1;
+    border-radius: 4px 5px;
+}
+
+.thCol {
+   /* background-color: #8a9bac*/
+}
+.table {
+}

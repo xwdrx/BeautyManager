@@ -1,0 +1,71 @@
+﻿@*services' table with a description of the specialist's personalities*@
+@model BeautySpecialistViewModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<nav class="navbar border p-2" >
+
+    <a a asp-area="" asp-controller="BeautyServices" asp-action="Add"  class="btn btn-success">Go to add</a>
+    <form asp-controller="BeautyServices" asp-action="Index" class="d-flex justify-content-end ">  
+        <input type="text" name="filterName"  placeholder="filter" aria-label="filter" class="form-control"/>
+        <button type="submit" class="btn btn-success">Filter</button>
+    </form>
+</nav>
+
+
+<div class="container">
+    <div class="row">
+       <div class="col">
+           
+         
+        Id: @Model.Id <br/>
+        Specialist's Name: @Model.FirstName<br/>
+        Specialist's Last Name: @Model.LastName<br/>
+        Specialist's Phone Number: @Model.PhoneNumber<br/>
+        Specialist's email address: @Model.Email<br/>
+
+       </div>
+
+        <div class="text-center col">
+   <table class="table">
+       <thead>
+           <tr>
+                <th scope="col">
+                   ID
+               </th>
+                 <th scope="col">
+                   Name
+               </th>
+                 <th scope="col">
+                   Description
+               </th>
+            
+                 <th scope="col">
+                   Actions
+               </th>
+           </tr>
+       </thead>
+       <tbody>
+           
+        
+            @foreach (var beautyServices in Model.BeautyServices) 
+            {
+                <tr>
+                    <th scope="row">@beautyServices.Id</th>
+                    <td>@beautyServices.name</td>
+                     <td>@beautyServices.Description</td>
+                     
+                    <td  class="btn-group ">
+                        <a asp-area="" asp-controller="BeautyServices" asp-action="View" asp-route-serviceID="@beautyServices.Id " class="btn btn-sm " >View</a>
+                      
+                        <a asp-area="" asp-controller="BeautyServices" asp-action="Delete" asp-route-serviceID="@beautyServices.Id" class="btn btn-sm" >Delete</a>
+                    </td>
+                </tr>
+            }
+             
+
+            </tbody>
+       </table>
+         </div>
+    </div>
+</div>

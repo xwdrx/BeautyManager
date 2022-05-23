@@ -1,0 +1,56 @@
+﻿@model BeautyServicesViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    Services' information:
+    Beauty Speciaist: @Model.BeautySpecialist <br />
+    Name: @Model.name <br/>
+    Description: @Model.Description <br/>
+  
+</div>
+
+<form asp-controller="Cosmetology" asp-action="Index">  
+    <input type="text" name="filterName"/>
+    <button type="submit" class="btn btn-success">Filter</button>
+</form>
+<<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                  <th scope="col">
+                   ID
+               </th>
+                 <th scope="col">
+                   Name
+               </th>
+                 <th scope="col">
+                   Description
+               </th>
+                 <th scope="col">
+                   Price
+               </th>
+                 <th scope="col">
+                   Actions
+               </th>
+            </tr>            
+        </thead>
+        <tbody>
+            @foreach (var cosmetic in Model.cosmetology)
+            {
+                <tr>
+                    <th scope="row">@cosmetic.Id</th>
+                    <td>@cosmetic.name</td>
+                     <td>@cosmetic.Description</td>
+                     <td>@cosmetic.Price</td>
+                    <td>
+                        <a asp-area="" asp-controller="Cosmetology" asp-route-cosmetologyID="@cosmetic.Id" asp-action="Delete">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+</div>
